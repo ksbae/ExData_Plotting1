@@ -4,7 +4,7 @@ Elect2 = Elect[Elect[,"Date"]=="1/2/2007" | Elect[,"Date"]=="2/2/2007",]
 Len = nrow(Elect2)
 attach(Elect2)
 
-png(file="plot4.png", width=480, height=480)
+#png(file="plot4.png", width=480, height=480)
 par(mfrow=c(2,2))
 
 plot(Global_active_power, xlab="", ylab="Global Active Power", type="l", xaxt="n")
@@ -22,5 +22,5 @@ axis(1, at=c(1, Len/2, Len), labels=c("Thu","Fri","Sat"))
 plot(Global_reactive_power, xlab="datetime", type="l", xaxt="n")
 axis(1, at=c(1, Len/2, Len), labels=c("Thu","Fri","Sat"))
 
-#dev.copy(png, file = "plot4.png", width=480, height=480) ## Copy my plot to a PNG file
+dev.copy(png, file = "plot4.png", width=480, height=480) ## Copy my plot to a PNG file
 dev.off()
